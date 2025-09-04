@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int i, pos, val;
+    int i, pos;
     int arr[20] = {2, 4, 6, 8, 10, 12};
     int size = 6;
     
@@ -13,12 +13,11 @@ int main() {
     cout << "Enter the Position:" << endl;
     cin >> pos;
     
-    for(i = (size-1); i >= pos; i--)
+    for(i = pos; i < (size-1); i++)
     {
-        arr[i+1] = arr[i];
+        arr[i] = arr[i+1];
     }
-    arr[pos] = val;
-    size++;
+    size--;
     
     cout << "Array after deletion: "; 
     for (int i = 0; i < size; i++) 
